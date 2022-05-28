@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>directingInputFromFile</title>
+    <link rel="stylesheet" href="../../css/chapter.css">
+</head>
+<body>
+    <a tabindex="1" href="../../unixEssentialTraining.html">&larr;home</a>
+    <header>
+        <h1>Directing Input from a File</h1>
+    </header>
+    <main>
+        <section>
+            <h3 tabindex="2">command &lt; file</h3>
+            <p>this is much less common to use because unix usually automatically does this</p>
+            <p> for instance</p>
+            <h3>cat file </h3>
+            <p>is similar to</p>
+            <h3>cat &lt; file</h3>
+            <p> the difference is subtle but the output is the same in this instance</p>
+            <img tabindex="2" src="images/1LessThan.png" alt="" class="imgHover">
+            <h2 tabindex="3">Good Example</h2>
+            <p>we can sort a list using the above method and then output it to a new file</p>
+            <h3>sort &lt; file > new file</h3>
+            <p> in this instance we could also just do</p>
+            <h3>sort people.txt > sorted_people.txt</h3>
+            <img tabindex="3" src="images/2sorted.png" alt="" class="imgHover">
+            <hr>
+            <h2>important note</h2>
+            <p>most unix commands use this command &lt; file format automatically </p>
+            <p>but some don't</p>
+            <h3 tabindex="5">examples of this</h3>
+            <ul>
+                <li>Email 
+                    <p>mail -s "subject" somone@nowhere.com &lt; msg_File</p>
+                </li>
+                <li>mySql
+                    <p>mysql -u user -p database &lt; db_backup.sql</p>
+                </li>
+            </ul>
+
+
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShorthandCharacterSets</title>
+    <link rel="stylesheet" href="../../css/default.css">
+</head>
+<body>
+    <header>
+        <h1>Shorthand Character Sets</h1>
+        <h2>Shorthand</h2>
+    </header>
+<main>
+    <section tabindex="1" class="table">
+    <table>
+            <tr>
+                <th>Shorthand</th>
+                <th>Meaning</th>
+                <th>Equivalent</th>
+            </tr>
+            <tr>
+                <td>\d</td>
+                <td>Digit</td>
+                <td>[0-9]</td>
+            </tr>
+            <tr>
+                <td>\w</td>
+                <td>Word Character</td>
+                <td>[a-zA-Z0-9_]</td>
+            </tr>
+            <tr>
+                <td>\s</td>
+                <td>Whitespace</td>
+                <td>[ \t\r\n]</td>
+            </tr>
+            <tr>
+                <td>\D</td>
+                <td>Non Digit</td>
+                <td>[^0-9]</td>
+            </tr>
+            <tr>
+                <td>\W</td>
+                <td>Non Word Character</td>
+                <td>[^a-zA-z0-9_]</td>
+            </tr>
+            <tr>
+                <td>\S</td>
+                <td>Non Whitespace</td>
+                <td>[^ \t\r\n]</td>
+            </tr>
+        </table>
+    </section>
+    <section>
+        <img src="shorthandShortcut.png" alt="">
+        <p>These are very useful but they are not in all regular expression engines
+        (especilly old regular expression tools in unix)</p>
+        <h3>caution</h3>   
+        <p tabindex="2">Remember, an underscore _ is considered a word character so be careful using the \w shorthand </p>
+        <p>/\w\w\w/ matches "ABC", "123", "1_A"</p>
+        <p>while a hypen/dash - is not considered a word character</p>
+        <p tabindex="3">use /\w\-/ to include the hyphen, this is equivalent to /[a-zA-z0-9_\-/</p>
+        <img src="images/backSlashw.png" alt="back slash w"><img src="images/slashWhyphen.png" alt="back slash hyphen">
+        <h3>Examples</h3>
+        <h4 tabindex="4">example 1</h4>
+        <p>/\d\d\d\d/ matches "1984" but not "text"</p>
+        <img tabindex="5" src="images/text1984.png" alt="1984 text"><img src="images/digitShorthand.png" alt="back slash d lowercase">
+        <br>
+        <h4 tabindex="5">example 2</h4>
+        <p>/\w\s\w\w/ matches "I am" but not "Am I"</p>
+        <p>/\d\s/ while /^\d\s/ will give us the characters</p>
+        <img tabindex="6" src="images/backSlashDigit.png" alt="backslash d"><img src="images/backSlashDigitSpace.png" alt="backslash d backslash s">
+        <img src="images/caretDigitSpace.png" alt="negative caret digit space">
+        <h3 tabindex="7">caution</h3>
+        <p>/^\d\s/ is not the same as /\D\S/</p>
+        <p>/^\d\s/ = NOT a digit OR space character</p>
+        <p>/\D\S/ = NOT a digit or NOT space, which is alot of things</p>
+        <img tabindex="8" src="images/capitalDandS.png" alt="caret capital D and S">
+        <h2 >standard uses</h2>
+        <img  src="standardUsesShorthand.png" alt="standard uses">
+        <h2 ">Caution</h2>
+        <img src="cautionShorthand.png" alt="caution">
+    </section>
+</main>
+</body>
+</html>

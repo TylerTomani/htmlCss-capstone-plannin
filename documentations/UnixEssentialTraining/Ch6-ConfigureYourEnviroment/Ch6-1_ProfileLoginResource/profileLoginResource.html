@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ch6-1_profileLoginResource</title>
+    <link rel="stylesheet" href="../../css/chapter.css">
+    <link rel="stylesheet" href="../../css/nanoScript.css">
+
+</head>
+<body>
+    <a tabindex="1" href="../../../UnixEssentialTraining/unixEssentialTraining.html">&larr;home</a>
+    <h1 tabindex="1">Profile, Login, Resource Files</h1>
+    <main>
+        <section>
+            <p>the profile and login files are located in specific shell folders <br>
+            such as:</p>
+            <ul>
+                <li>~/.bash_profile, ~/.bash_login
+                    <ul>
+                        <li>login doesn't get used, I don't think it exist anymore</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>or</p>
+            <ul>
+                <li>~/.zprofile, </li>
+            </ul>
+            <p>Remember these are hidden and can only be seen using</p>
+            <ul>
+                <li>ls -a</li>
+            </ul>
+            <h2>more configuration files</h2>
+            <ul>
+                <li>~/.bashrc</li>
+                <li>~/.zshrc</li>
+            </ul>
+            <p>these gets run whenever a new bash shell gets opened</p>
+            <ul>
+                <li>~/.bash_logout</li>
+            </ul>
+            <p>I don't think the logout exist anymore, plus we don't use these that often anyways</p>
+            <h2>Where should we put our configuation??</h2>
+            <p> as a begginer we can put everything in</p>
+            <ul>
+                <li>~/.bash_profile (or) ~/.zprofile</li>
+            </ul>
+            <p>BUT, these don't get applied when you open a new shell</p>
+            <p>the following code always puts what is in your bashrc file into your bash_profile</p>
+            <pre>
+                
+            if [ -f ~/.bashrc]; then
+                source ~/.bashrc
+            fi
+            </pre>
+            <p>put the above code in bash_profile BUT i don't think bashrc exist anymore</p>
+            <h2>We're only going to use ~/.zshrc</h2>
+            <img class="imgEnlarge" tabindex="2" src="images/zshrcNano.png" alt="">
+        </section>
+        <section class="nanoScript">
+        <pre>
+<span class="nanoHeader">GNU nano 2.0.6</span>
+echo ""
+echo "Welcome, ": whoami
+echo "Today is "; date 
+echo ""
+        </pre>
+        <p>Unix will run these commands every time you log in into zshell</p>
+        <p>to load those changes to .zshrc type the command: <br>  </p><br>
+        <p> source .zshrc</p>
+        <img tabindex="3" class="imgEnlarge" src="images/sourchZshrc.png" alt="">
+        <p>or just close terminal window and open another</p>
+        </section>
+    </main>
+
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CharacterRanges</title>
+    <link rel="stylesheet" href="../../css/default.css">
+</head>
+<body>
+    <header>
+        <h1>Character Ranges</h1>
+    </header>
+    <section class="examples">
+        <h2 tabindex="1">Range character -</h2>
+        <p>the - ( dash or hypen) is the range character</p>
+        <p>Instead of typing out</p>
+        <ul>
+            <li>/abcdefghijklmnopqrstuvwxyz/</li>
+            <li>/ABCDEFGHIJKLMNOPQRSTUVWXYZ/</li>
+            <li>/0123456789/</li>
+        </ul>
+        <p>we can use</p>
+        <ul>
+            <li>/a-z/</li>
+            <li>/A-Z/</li>
+            <li>/[0-9]/</li>
+        </ul>
+        <p>the - (dash or hyphen) is only a metacharacter within a character set, otherwise it is a literal character</p>
+        <img src="images/AtoZ.png" alt="A to Z uppercase"> <img src="images/aToZlower.png" alt="a to z lowercase"> 
+        <img src="images/aToZboth.png" alt="a to z both cases">
+        <br>
+        <h3 tabindex="2">Caution: common mistake</h3>
+        <p>/[50-99]/ will not match numbers between 50 and 99 because it can only match one character or digit</p>
+        <p>this would match the character/digit 0 or 5 to the number of nine so 0-9</p>
+        <p>It is NOT a number range but a character range</p>
+        <img tabindex="3" src="images/numCharacter.png" alt="number single character match"> <img tabindex="4" src="images/numMatch3.png" alt="match three numbers">
+        <img tabindex="5" src="images/phoneNumMatch.png" alt="phone number match">
+        <br>
+    </section>
+</ul>
+</body>
+</html>

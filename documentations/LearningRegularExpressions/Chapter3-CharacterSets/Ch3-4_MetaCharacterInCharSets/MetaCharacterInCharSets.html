@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaCharacterInCharacterSets</title>
+    <link rel="stylesheet" href="../../css/learnRegExp.css">
+    <style>
+        #inlineLi li{
+            display: inline-block;
+            margin: auto 1%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 tabindex="1">Metacharacters inside Character Sets</h1>
+    </header>
+    <section>
+    <h2>Metacharacters in character sets</h2>
+    <p>most metacharacters are already escaped within character sets</p>
+    <p>So, there is no need to escape them again</p>
+    <p>the period . is a period inside a character set, and NOT a Wildcard
+    <p>/h[a.]t/ matches "hat" and "h.t" but NOT "hot"</p>
+    <img src="images/hatHotHperiod.png" alt=" hat hot h period">
+    <p>a wildcard . inside a character set /h[.]t/ would be unecessary anyways</p>
+    <p><strong>The Exceptions</strong> to this rule are:</p>
+    <ul id="inlineLi">
+        <li>]</li>
+        <li>-</li>
+        <li>^</li>
+        <li>\</li>
+    </ul>
+    <p> To use these exceptions literally, we need to escape them. This is because the end bracket ] will cause the regex engine 
+        to think the character set is done,dash/hypen - is range within character set, if we mean a literal backslash \ 
+        we need to escape it /\\/ d</p>
+    <br>
+    <h3>Examples</h3>
+    <h4 tabindex="2">example 1</h4>
+    <p>/var<span class="blue">[[</span>(][0-9][<span class="red">\]</span>)]/</p>
+    <p>var(3) var[4]</p>
+    <img src="images/varNoEscapeBracket.png" alt="without escape for end bracket">
+    <img src="images/varEscapeEndBracket.png" alt="with escaped end bracket">
+    <p tabindex="3">the first <span class="blue">[[</span> is okay because it hasn't been closed so we don't have to escape it</p>
+    <p>but we need to escape the end bracket</p>
+    <h4 tabindex="4">example 2</h4>
+    <p>/file[0-9<span class="red">\-</span>\\_]1</p>
+    <p>file01 file-1 file\1 file_1</p>
+    <img src="images/ex1.png" alt="example 1"><img src="images/ex2.png" alt="example 2"><img src="images/ex3.png" alt="example 3">
+    <p tabindex="5">notice how originally we do not need to escape the dash -, but the backslash will escape it and make it a range, not sure why??</p>
+    <img src="images/ex4dashBackslash.png" alt="dash not escaped">
+    <p tabindex="6">we need to escape the dash - and escape the backslash \\ to prevent the dash/hypen -  from becoming a range, i think?</p>
+    <img src="images/ex5escapeDash.png" alt="escape dash"><img src="images/ex6withUnderscore.png" alt="with underscore added">
+    <p tabindex="7">This is why it is good practice to escape a dash within a character set to prevent it from becoming a range </p>
+    <p>Regardless, just remember to escape a dash - when you do not want it to be a range </p>
+    <br>
+</section>
+</body>
+</html>

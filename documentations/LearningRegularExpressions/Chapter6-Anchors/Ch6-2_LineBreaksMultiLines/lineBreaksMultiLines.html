@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lineBreaksMultiLines</title>
+    <style>
+        tbody td:first-child {text-align: center;}
+        tbody > tr > td,th {border: 1px solid black;}
+    </style>
+</head>
+<body>
+    <a tabindex="1" href="../../LearningRegularExpressions.html">&larr;home</a>
+    <h1>Line Breaks and Multiline Mode</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Metatcharacter</th>
+                <th>Meaning</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>^</td>
+                <td>Start of string/line</td>
+            </tr>
+            <tr>
+                <td>$</td>
+                <td>End of string/line</td>
+            </tr>
+            <tr>
+                <td>\A</td>
+                <td>Start of string, never end of line</td>
+            </tr>
+            <tr>
+                <td>\Z</td>
+                <td>End of string, never end of line</td>
+            </tr>
+        </tbody>
+    </table>
+    <img tabindex="2" src="images/1.png" alt="">
+    <p>this does not match any of the subsequent line, why?</p>
+    <p>because there are two different modes</p>
+    <ul>
+        <li>single line
+            <ul><li>is default, so ^ and $ do not match line break</li>
+                <li>as well as \A and \Z (Remeber these two do not work in javascript)</li></ul>
+        </li>
+        <li>multiline mode
+            <ul><li>^ and $ will work</li>
+                <li>\A and \Z won't work</li>
+            </ul>
+        </li>
+    </ul>
+    <p> most unix regex tool will only support single line mode <br>
+    multiline came later</p>
+    <p>to use multi line mode in the following languages add:</p>
+    <img tabindex="3" src="images/multiline.png" alt="">
+</body>
+</html>

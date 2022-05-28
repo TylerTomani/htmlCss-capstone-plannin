@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DirectingOutputToFile</title>
+    <link rel="stylesheet" href="../../css/chapter.css">
+</head>
+<body>
+    <a tabindex="1" href="../../unixEssentialTraining.html">&larr;home</a>
+    <header>
+        <h1>Directing Output to a File</h1>
+    </header>
+    <main>
+        <section>
+            <h2 tabindex="1">Standard Input and Output</h2>
+            <ul>
+                <li>Standard Input: stdin 
+                    <ul>
+                        <li>unix using keyboard as stdin by default</li>
+                    </ul>
+                </li>
+                <li>Standard Output: stdout 
+                    <ul>
+                        <li>default is text terminal</li>
+                    </ul>
+                </li>
+            </ul>
+            <h2 tabindex="2">Direct output to a file</h2>
+            <h3>command > file</h3>
+            <p>on the right side of the > we put a path to a file where the output of the command is directed</p>
+            <p>if no path is specified it get saved to the current working direcotry</p>
+            <img tabindex="2" src="images/1output.png" alt="" class="imgHover">
+            <p>if we direct output to a file containg something it will <strong>Overwrite</strong> that content </p>
+            <p>so be careful</p>
+            <hr>
+            <h2 tabindex="3">combining files with cat</h2>
+            <p>we can use cat to combine to files and send it to a new file</p>
+            <h3>cat people.txt hello.txt > cat_file.txt</h3>
+            <img tabindex="3" src="images/2catFile.png" alt="" class="imgHover">
+            <hr>
+            <h2 tabindex="4">appending files</h2>
+            <p>instead of erasing content of a file we can append contents of a file to another using</p>
+            <h3>command >> file</h3>
+            <img tabindex="4" src="images/3append.png" alt="" class="imgHover">
+        </section>
+    </main>
+</body>
+</html>

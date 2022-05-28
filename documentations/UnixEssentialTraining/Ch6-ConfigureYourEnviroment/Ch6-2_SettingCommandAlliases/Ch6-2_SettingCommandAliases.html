@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ch6-2_SettingCommandAliases</title>
+    <link rel="stylesheet" href="../../css/chapter.css">
+    <link rel="stylesheet" href="../../css/nanoScript.css">
+</head>
+<body>
+    <a tabindex="1" href="../../unixEssentialTraining.html">&larr;home</a>
+    <h1>Setting Command Alliases</h1>
+    <main>
+        <section class="nanoScript">
+            <p>to get currently defined aliases type: <br>alias</p>
+            <img tabindex="2" src="images/currentAliases.png" alt="">
+            <p>this is telling us that cp is the same as 'cp -i', df is 'df -h</p>
+            <p>we can make a command by typing alias followed by what we want it to equate to</p>
+            <pre tabindex="3">
+                ll ='ls -lah'
+            </pre>
+            <p>now, whenever we type ll is will actually be the ls -lah command</p>
+            <p>but, when we type an alias like this it doesn't stick aroudn <br>
+            we need to make changes in the ~/.zshrc file</p>
+            <pre tabindex="4">
+                nano ~/.zshrc 
+            </pre>
+            <p>whenever we make changes to the file we need to open a new terminal window or <br>
+            type the command source followed by shell folder</p>
+            <pre tabindex="5">
+                source ~/.zshrc 
+            </pre>
+            <p> if you find yourself always typing a command with certain options 
+                <br> make it an alias!
+            </p>
+        </section>
+    </main>
+</body>
+</html>

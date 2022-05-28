@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fileSystemBasics</title>
+    <link rel="stylesheet" href="../../css/chapter.css">
+</head>
+<body>
+    <header>
+        <h1>File System Basics</h1>
+    </header>
+    <section>
+        <h2>Home Directory</h2>
+        <p>When you first login into terminal, Unix will log you into your home directory</p>
+        <h3 tabindex="1">ls</h3>
+        <p>ls will show the folders located in your home directory</p>
+        <img tabindex="2" src="images/homeDirectory.png" alt="folders home directory">
+        <h3 tabindex="3">pwd</h3>
+        <p>We can find our current directory with the <strong>pwd</strong> command</p>
+        <p>which stands for "present working directory"</p>
+        <img tabindex="4" src="images/pwd.png" alt="present working directory">
+        <p tabindex="5">it returns the path to the current directory</p>
+        <h3 tabindex="6">ls -l</h3>
+        <p>ls with the -l option shows the folders within the present working directory along with more details</p>
+        <img tabindex="6" src="images/lsAndLoption.png" alt="ls with l option">
+        <p tabindex="7">the fifth column is the size of the file</p>
+        <h3 tabindex="8">ls -lh</h3>
+        <p>we can use the -lh option to see the size in "human readable" format</p>
+        <img class="imgHover" tabindex="9" src="images/hOption.png" alt="ls dash l and h options">
+        <h3 tabindex="10">ls -lha</h3>
+        <p>another option for ls we can us is -a, which stands for all.</p>
+        <p>it returns all the files in the current directory including the hidden files that begin with a dot (.)</p>
+        <img tabindex="11" src="images/aOption.png" alt="ls a option">
+        <br>
+        <p tabindex="12">the d at the beggining means the file is a directory</p>
+        <img class="imgHover" tabindex="13" src="images/dFile.png" alt="directory">
+        <p>the application folder is a directory which means there are files within it</p>
+        <img class="imgHover" tabindex="14" src="images/appDirectory.png" alt="application directory">
+        <p>the - at the beggining means that it is just a file</p>
+        <img class="imgHover" tabindex="15" src="images/-file.png" alt="">
+    </section>
+</body>
+</html>

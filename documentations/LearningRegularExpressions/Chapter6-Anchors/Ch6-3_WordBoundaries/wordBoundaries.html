@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wordBoundaries</title>
+    <style>
+        tbody td:first-child {text-align: center;}
+        tbody > tr > td,th {border: 1px solid black;}
+    </style>
+</head>
+<body>
+    <a tabindex="1" href="../../LearningRegularExpressions.html">&larr;home</a>
+    <h1>Word Boundaries</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Metatcharacter</th>
+                <th>Meaning</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>\b</td>
+                <td>Word boundary start/end of word</td>
+            </tr>
+            <tr>
+                <td>\B</td>
+                <td>Not a word boundary</td>
+            </tr>
+        </tbody>
+    </table>
+    <img tabindex="2" src="images/1.png" alt="">
+    <ul>
+        <li> These reference a position and not an actual character</li>
+        <li>exist:
+            <ul>
+                <li>before the first word character in the string</li>
+                <li>after the last character in the string</li>
+                <li>Between a word character and a non-word character</li>
+            </ul> 
+        </li>
+        <li>word characters: [A-Za-z0-9_]</li>
+    </ul>
+    <h3>Examples</h3>
+    <p>/\b\w+\b/ </p>
+    <p>finds four matches in "This is a test"</p>
+    <p>it would also match "abc_123" but not "top-notch"<br>
+        because _ underscore is a character but - dash/hypen is NOT
+    </p>
+    <p>/\bNew\bYork\b/</p>
+    <p>would not match "New York"</p>
+    <p>/\bNew\b \bYork\b/</p>
+    <p>you need to account for the space</p>
+    <p>/\Bw+\B/</p>
+    <p>would match ("hi" and "es") in "This is a test"</p>
+    <hr>
+    <p>say we want to find the letter "e" at the end of the word, even with punctuation</p>
+    <img tabindex="2" src="images/e.png" alt="">
+    <p>doesn't work</p>
+    <img tabindex="3" src="images/allEs.png" alt="">
+    <p>now we have all the e's that end the word</p>
+    <p>the below is how we find all stand alone a's</p>
+    <img tabindex="4" src="images/a.png" alt="">
+    <p>The below is how we find a word that ends in "s"</p>
+    <img tabindex="5" src="images/endInS.png" alt="">
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter3-CharacterSets</title>
+    <link rel="stylesheet" href="../../css/learnRegExp.css">
+</head>
+<body>
+    <header>
+        <h1>Character sets</h1>
+    </header>
+    <main>
+        <section class="examples">
+            <h3 tabindex="1">Define character set []</h3>
+            <p>Matches only one charcter defined within character set's brackets []</p>
+            <p>/gr[ea]t does NOT match "great"</p>
+            <img src="images/great.png" alt="great">
+            <p>but /gr[ea]y/ matches "grey" and "gray" </p>
+            <img src="images/grey.png" alt="grey">
+            <p>the order of characters in set does not matter</p>
+            <p>/aeiou/ would match any one vowell</p>
+            <br>      
+            <p>Character sets also works with numbers</p>
+            <img tabindex="2" src="images/charSetDigits.png" alt="character set numbers"> 
+            <p> or special characters </p>
+            <img tabindex="3" src="images/specialCharSet.png" alt="special character set">                
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>settingPermissions</title>
+    <link rel="stylesheet" href="../../css/chapter.css">
+    <style>
+        td:nth-child(2),td:nth-child(3),td:nth-child(4){text-align: center;}
+        .margLeft {margin-left: 25%;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Setting Permissions</h1>
+    </header>
+    <main>
+        <section>
+            <h2 tabindex="1" class="margLeft">Alpha Notation</h2>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>user</th>
+                    <th>group</th>
+                    <th>other</th>
+                </tr>
+                <tr>
+                    <td>Read</td>
+                    <td>r</td>
+                    <td>r</td>
+                    <td>r</td>
+                </tr>
+                <tr>
+                    <td>Write</td>
+                    <td>w</td>
+                    <td>w</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Execute</td>
+                    <td>x</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>rwx</td>
+                    <td>rw</td>
+                    <td>x</td>
+                </tr>
+            </table>
+            <h2 tabindex="2">Changing Permissions</h2>
+            <h3>chmod "change mode"</h3>
+            <h4>Example:</h4>
+            <ul>
+                <li>chmod ugo=rwx filename</li>
+                <li>chmod u=rwx,g=rw,o=x filename</li>
+            </ul>
+            <img tabindex="2" src="images/chmod.png" alt="chmod" class="centerImg">     
+            <p>You can use "+" or "-" to add or take away permissions</p>
+            <img tabindex="2" src="images/plusMinusPermissions.png" alt="" class="centerImg">
+        </section>
+        <section>
+            <h2 tabindex="3" class="margLeft">Octal Notation</h2>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>user</th>
+                    <th>group</th>
+                    <th>other</th>
+                </tr>
+                <tr>
+                    <td>Read</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Write</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Execute</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>7</td>
+                    <td>6</td>
+                    <td>4</td>
+                </tr>
+            </table>
+            <img tabindex="3" class="imgHover"src="images/octalExample.png" alt="">
+            <h2 tabindex="4">Important Reminder!</h2>
+            <p>to change directory permissions use chmod 741 directoryName</p>
+            <p>BUT</p>
+            <p>this will only change the directory to u=rwx,g=rw,o=x and NOT the files inside</p>
+            <p>Remember to use Recursice -R</p>
+            <h4 tabindex="4">chmod -R 777 somedirectory</h4>
+            <p>will change direcotry and its files to ugo=rwx</p>
+
+        </section>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stoppingProcesses</title>
+    <link rel="stylesheet" href="../../css/chapter.css">
+</head>
+<body>
+    <header>
+        <h1>Stoppping Processes</h1>
+    </header>
+    <main>
+        <section>
+            <h2 tabindex="1">how to stop a program</h2>
+            <ul>
+                <li>let it finish</li>
+                <li>Exit: 
+                    <ul>
+                        <li>q</li>
+                        <li>control + q</li>
+                        <li>x</li>
+                        <li>control + x</li>
+                        <li>esc key</li>
+                    </ul> 
+                </li>
+                <li>Force Quit:
+                    <ul>
+                        <li>control + c</li>
+                    </ul>
+                </li>
+                <li>close window, (But process might keep runnin!) use with caution</li>
+                <li>Kill Process</li>
+            </ul>
+            <h3 tabindex="2">Kill proccess</h3>
+            <p>we can kill a process using the "PID" number found in top which stands for "process I.D"</p>
+            <img tabindex="2" src="images/1killTop.png" alt="" class="imgHover">
+            <h3 tabindex="3">Try it with terminal window</h3>
+            <ul>
+                <li>open a new terminal window</li>
+                <img tabindex="3" src="images/2newTerminal.png" alt="" class="imgHover">
+                <li>In one of the terminal windows, type the command ps</li>
+                <img tabindex="4" src="images/3ps.png" alt="" class="imgHover">
+                <li>type in kill command followed by the PID number of the new terminal window</li>
+                <h4>kill 16860</h4>
+                <li>the command kill alone usually works but sometimes doesn't and won't with terminal,</li>
+                <img tabindex="5" src="images/4kill1.png" alt="" class="imgHover">
+                <li>when it doesn't work us the -9 option</li>
+                <img tabindex="6" src="images/5kill-9completed.png" alt="" class="imgHover">
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

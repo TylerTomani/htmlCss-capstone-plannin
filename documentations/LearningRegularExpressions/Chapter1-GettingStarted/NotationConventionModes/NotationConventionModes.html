@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotationConventionModes</title>
+    <link rel="stylesheet" href="../../css/default.css">
+</head>
+<body>
+    <header>
+        <h1>Notation convention & modes</h1>
+    </header>
+    <main>
+        <p>To define a regular expression we place it between two forward slashes</p>
+        <p>/abc/</p>
+        <p>these are called "delimiters" which lets us know we are talking about a regular expression</p>
+        <p>for most of the time we do not need to use these forward slashes but some programing languages require them</p>
+        <h2>flags</h2>
+        <p>there are flags that indicate different modes for regular expressions </p>
+        <ul>
+            <li>Standard: <span class="blue">/re/</span> finds only the first match of the expression within the document</li>
+            <li>Global: <span class="blue">/re/g</span> - matches expression througout the entire document</li>
+            <li>Case insensitive: <span class="blue">/re/i</span> - upper case and lower case is disregarded</li>
+            <li>multiline: <span class="blue">/re/m</span> - by default expression cannot span to multiple lines, but m flag allows it</li>
+            <li>unicode: - u</li>
+            <li>sticky - y</li>
+        </ul>
+        <h2>grep</h2>
+        <p>flags used to be placed at the beggining</p>
+        <p> g/re/p</p>
+        <p>grep stands for: </p>
+        <p>gloabl/regular expression/print</p>
+    </main>
+</body>
+</html>

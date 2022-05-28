@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter3-CharacterSets</title>
+    <link rel="stylesheet" href="../../css/learnRegExp.css">
+</head>
+<body>
+    <header>
+        <h1>Negative character sets</h1>
+    </header>
+    <main>
+        <section class="character">
+            <h2 tabindex="1">Negative character set character ^</h2>
+            <p> the ^ (caret) negates a character set</p>
+            <p>it means what follows the ^ is not a character within the character set </p>
+            <p>/[^aeiou]/ matches any one consonant(not a vowell)</p>
+            <p>/see[^mn]/ matches "seek" and "sees" but not "seem" or "seen"</p>
+            <h3>examples</h3>
+            <img src="images/negativeCharSet.png" alt="abcde negative character set">
+            <h3 tabindex="2">common mistake</h3>
+            <p>/see[^mn] would not match "see" </p>
+            <p>because a negative character set is still looking for a character</p>
+            <p>but it would match "see." and "see " with a space</p>
+            <img tabindex="3" src="images/seeNegMN.png" alt="see caret mn">
+            <br>
+            <p> the negative character is a great to match and remove spaces</p>
+            <img tabindex="4" src="images/negativeSpace.png" alt="negative space">
+        </section>
+    </main>
+</body>
+</html>

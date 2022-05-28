@@ -1,0 +1,28 @@
+h1,h2,h3,h4,h5,ol,ul,li,p{
+    padding: 0;
+    margin: 0;    
+}
+.noteParagraph{
+    margin: 0;
+}
+img:focus {
+    width: 95%;
+}
+
+img {
+    float: left;
+    margin: 2%;
+    border: 1px solid blue;
+    width: 45%;
+}
+.wrapper {
+    border: 2px solid black;
+    background: cyan;
+    content: "";
+    display: table;
+    clear: both;
+}
+p {
+    /* width: 50%; */
+    margin: 2%;
+}

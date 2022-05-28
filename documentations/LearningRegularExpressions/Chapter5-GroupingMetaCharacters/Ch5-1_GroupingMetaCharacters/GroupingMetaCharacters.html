@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GroupingMetaCharacters</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.map.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/default.css">
+</head>
+<body>
+    <a href="../../LearningRegularExpressions.html">&larr;home</a>
+    <header>
+        <h1>Grouping Metacharacters</h1>
+    </header>
+    <main class="container">
+        <div tabindex="1" class="d-table" style="border:1px solid black">
+            <div class="d-table-row">
+                <div class="d-table-cell p-2">Metacharacter</div>
+                <div class="d-table-cell p-2" style="text-align: center;">Meaning</div>
+            </div>
+            <div class="d-table-row">
+                <div class="d-table-cell" style="text-align: center;">(</div>
+                <div class="d-table-cell">starting grouped expression</div>
+            </div>
+            <div class="d-table-row">
+                <div class="d-table-cell" style="text-align: center;">)</div>
+                <div class="d-table-cell">ending grouped expression</div>
+            </div>
+        </div>
+        <ul>
+            <li>/(abc)+ matches "abc" and "abcabcabc</li>
+            <li>/(in)?definite/ matches "indefinite" and "definite"</li>
+            <p>when you make a single character in parenthesis it's the same</p>
+            <li>/run(s)?/ matches "run" and "runs" and would be the same as /runs?/</li>
+        </ul>
+        <h2>Grouping and replace</h2>
+        <h3 class="ms-2">/(\d{3})-(\d{3}-\d{4})/</h3>
+        <br>
+        <p>$1 will replace the first (\d{3}) is in the first group</p>
+        <img tabindex="2" src="images/1dollar1.png" alt="" class="mb-3">
+        <p>$2 will grab the second groud consisting of (\d{3}-\d{4})</p>
+        <img tabindex="3" src="images/2dollar2.png" alt="" class="mb-3">
+        <h2>Replacing using $</h2>
+        <p>now we can replace the text using the dollar signs</p>
+        <img tabindex="4" src="images/3replaceDollar.png" alt="" class="mb-3">
+
+    </main>
+    
+</body>
+</html>

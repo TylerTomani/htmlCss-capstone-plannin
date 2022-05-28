@@ -1,0 +1,70 @@
+h1,h2,h5,ol,p{
+    padding: 0;
+    margin: 0;    
+}
+ul {
+    margin: 0;
+}
+h3,h4 {
+    margin: 0 0 0 1%;
+    width: 50%;
+    padding: 0;
+}
+.noteParagraph{
+    margin: 0;
+}
+main {
+    margin: 0 5%;
+}
+img,p { margin-left: 1%;}
+img {
+    /* float: left;
+    margin: 1%;
+    border: 1px solid blue; */
+    width: 45%;
+}
+.img:focus, .imgHover:active {
+    width: 89%;
+}
+.imgEnlarge:active,.imgEnlarge:focus {
+    width: 75%;
+}
+section {
+    width: 97.5%;
+    margin: 1%;
+    border: 2px solid black;
+    background: cyan;
+    content: "";
+    display: table;
+    clear: both;
+}
+.img-container p {
+    font-size: 2em;
+}
+.centerImg {
+    margin: 0 auto;
+    display: block;
+    width: 50%;
+}
+.center {
+    text-align: center;
+}
+h2:active, h2:focus{
+    font-size: 2em;
+}
+h3:active, h3:focus {
+    font-size: 2em;
+}
+table {
+    border: 1px solid black;
+    margin: 1% 25%;
+}
+table th {
+    border: 1px solid black;
+}
+table td {
+    border: .1em solid black;
+}
+td:nth-child(1){
+        text-align: center;
+}

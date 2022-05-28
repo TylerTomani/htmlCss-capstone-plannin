@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CommandStructure</title>
+    <link rel="stylesheet" href="../../css/chapter.css">
+</head>
+<body>
+    <header>
+        <h1>Command Structure</h1>
+    </header>
+    <main>
+        <section>
+            <h2 tabindex="1">The Command structure</h2>
+            <p class="center" >command     options     arguments</p>
+            <p>the command is the program, the options are optionals, and the argument is what is passed into the command</p>
+            <h3>Example</h3>
+            <p class="center">echo 'Hello World'</p>
+            <p>echo is the program or function while "Hello World" is the argument being passed into the command</p>
+            <h3>options</h3>
+            <p class="center">echo -n 'Hello World'</p>
+            <p>would suppress the new line return </p>
+            <img class="imgEnlarge" tabindex="2" src="images/echo-n.png" alt="echo dash n">
+            <p class="center">make -v</p>
+            <p>returns the version of the program/command</p>
+            <p>as does</p>
+            <p class="center">make --version</p>
+            <p>--version does the same thing as -v</p>
+            <p>options are a single dash - followed by a letter or a double dash -- followed by a keyword</p>
+
+            <h3 tabindex="3">Another Example</h3>
+            <p class="center">ls -l -a -h /usr</p>
+            <p tabindex="4">the ls is the list directory program and it's options are: 
+                <ul>
+                    <li>-l <ul><li>A total sum for all the file sizes is output on a line
+                        before the long listing.</li></ul></li>
+                    <li>-a <ul><li>includes directory entries whose name begins with a dot (.)</li></ul></li>
+                    <li>-h <ul><li>When used with the -l option, use unit suffixes: Byte, Kilobyte,
+                        Megabyte, Gigabyte, Terabyte and Petabyte in order to reduce the
+                        number of digits to three or less using base 2 for sizes.</li></ul></li>
+                </ul></p>
+            <p>the /usr is the arguement which is a directory</p>
+            <p class="center">ls -lah /usr</p>
+            <p>you can combine options and the order does not matter</p>
+        </section> 
+
+    
+        <section>
+            <h2 tabindex="4">options</h2>
+            <p>sometimes, options have their own arguments</p>
+            <p class="center">banner -w 50 'hello world'</p>
+            <p>The -w sets the width of the banner and 50 is how wide the banner will be</p>
+            <p>it can also be written as</p>
+            <p class="center">banner -w50 'hello world'</p>
+            <h3>example</h3>
+            <p class="center">cat -n file1.txt file2.txt</p>
+            <p>cat will concatanate two files together and the -n option in this case will number the lines in the output</p>
+        </section>
+</body>
+</html>

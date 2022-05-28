@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>systemInformationCommands</title>
+    <link rel="stylesheet" href="../../css/chapter.css">
+
+</head>
+<body>
+    <header>
+        <h1>System Information Commands</h1>
+    </header>
+    <main>
+        <section>
+            <h2 tabindex="1">System Information Commands</h2>
+            <div style="position: relative;">
+            <ul style="display: inline-block;">
+                <li>date</li>
+                <li>uptime</li>
+                <li>users</li>
+                <li>who</li>
+                <li>uname</li>
+            </ul>
+            <ul style="display: inline-block; position: absolute; top: 0;">
+                <li>df</li>
+                <li>du</li>
+            </ul>
+            </div>
+            <h3>date </h3>
+            <img tabindex="2" src="images/1date.png" alt="" class="imgHover">
+            <h3>uptime </h3>
+            <p>tells us how long user has been online</p>
+            <img tabindex="3" src="images/2uptime.png" alt="" class="imgHover">
+            <h3>users</h3>
+            <p>reports all current logged in users</p>
+            <img tabindex="4" src="images/3users.png" alt="" class="imgHover">
+            <h3>who</h3>
+            <p>reports each instance of current users logged in</p>
+            <ul>
+                <li>the <strong>console</strong> is gui normal desktop enviroment display</li>
+                <li>the <strong>ttys000</strong> is the terminal window</li>
+            </ul>
+            <img tabindex="5" src="images/4who.png" alt="" class="imgHover">
+            <h3>uname</h3>
+            <p>returns the version of unix being used</p>
+            <img tabindex="6" src="images/5uname.png" alt="" class="imgHover">
+            <h4>uname -a </h4>
+            <p>more Information, -a option show hidden info and folders</p>
+            <img tabindex="6" src="images/5unameA.png" alt="" class="imgHover">
+            <h4>uname -p</h4>
+            <p>-p is the processor name</p>
+            <img tabindex="6" src="images/6unameP.png" alt="" class="imgHover">
+            <h3>df "disc free"</h3>
+            <p>shows us free space available on the disc</p>
+            <img tabindex="7" src="images/7df.png" alt="" class="imgHover">
+            <img tabindex="7" src="images/7dfFullView.png" alt="" class="imgHover">
+            <h3>du "disc usuage"</h3>
+            <p>shows how much space a file or directory take up</p>
+            <p>it's like get info</p>
+            <h4>du filePath</h4>
+            <p>if it's a directory it will show the size of each file or directory inside of it</p>
+            <img tabindex="8" src="images/8du.png" alt="" class="imgHover">
+            <h4>du -d 3 filename</h4>
+            <p>-d is for "depth" and limits how many folder/directories deep it will return</p>
+            <p> for example</p>
+            <h4>du -d 1 my_project</h4>
+            <p>will only go one directory deep while,</p>
+            <h4>du -d 3 my_project will go three deep</h4>
+            <img tabindex="9" src="images/8duDoption.png" alt="" class="imgHover">
+            <h4>du -d 0 my_project</h4>
+            <p>will only tell us the size of that directory which is <strong>VERY USEFUL</strong></p>
+            <img tabindex="10" src="images/9duDzero.png" alt="" class="imgHover">
+
+
+
+        </section>
+    </main>
+</body>
+</html>

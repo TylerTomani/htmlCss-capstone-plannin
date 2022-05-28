@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ch6-3_settingPathVariable</title>
+    <link rel="stylesheet" href="../../css/nanoScript.css">
+    <link rel="stylesheet" href="../../css/chapter.css">
+</head>
+<body>
+    <a href="../../unixEssentialTraining.html">&larr;home</a>
+    <h1>Setting the PATH Variable</h1>
+    <main>
+        <section class="nanoScript">
+            <p>These act as the settings for unix are used by commands and applications</p>
+            <p>They affect the way commands and applications do their work</p>
+            <p>We do this by creating variables and we create variables by typing</p>
+            <pre tabindex="2">
+    export FULL_NAME="Kevin Sloglund"
+            </pre>
+            <p>here is one variable built into the unix enviroment</p>
+            <ul>
+                <li>PATH</li>
+            </ul>
+            <img tabindex="3" src="images/path.png" alt="">
+            <p>This is telling unix, "check these directories for commands"</p>
+            <p>and not only look there but look in that order</p>
+            <br>
+            <p>inside the ~/.zshrc file we set path by typing</p>
+            <pre tabindex="4">
+    export PATH=
+            </pre>
+            <h2>MY SQL</h2>
+            <p>when we install the My SQL directory we need to add the path to it</p>
+            <p>copy and paste old PATH and add the my SQL PATH</p>
+            <pre tabindex="4">
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin<span style="color:cyan">:/usr/local/mySQL/bin</span>"
+"
+            </pre>
+            <p>instead of typing the whole old path, we can use $PATH</p>
+            <pre tabindex="5">
+    export PATH="$PATH:/usr/local/mySQL/bin"
+            </pre>
+
+        </section>
+    </main>
+    
+</body>
+</html>

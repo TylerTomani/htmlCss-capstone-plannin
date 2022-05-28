@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fileDirectoryPermission</title>
+    <link rel="stylesheet" href="../../css/chapter.css">
+</head>
+<body>
+    <header>
+        <h1 tabindex="1">File & Directory Permissions</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Unix Permissions notation</h2>
+            <ul>
+                <li>d <p>indicates it's a direcotry/folder</p></li>
+                <li>- <p>indicated it's a file</p></li>
+                <li>l <p>indicated it's a sym link</p></li>
+            </ul>
+            <img tabindex="2" src="images/ownerPermissionNotation.png" alt="" class="imgHover">
+            <h3>the first column</h3>
+            <h3 tabindex="3">File Permissions</h3>
+            <p>rwxrwxrwx</p>
+            <ul tabindex="3">
+                <li>r <p>read</p></li>
+                <li>w <p>write</p></li>
+                <li>x <p>execute</p></li>
+            </ul>
+            <img tabindex="3" style="margin: 0 auto;display:block; width: 20%" src="images/userGroupOther.png" alt="">
+            <img tabindex="3" src="images/filePermissions.png" alt="" class="imgHover">
+            <img tabindex="3" style="margin: 0 auto;display:block; width: 50%" src="images/rwx.png" alt="">
+            <h3 tabindex="4">File permission: Octal Notation</h3>
+            <ul tabindex="4">
+                <li>r = 4</li>
+                <li>w = 2</li>
+                <li>x = 1</li>
+            </ul>
+            <img tabindex="4" style="margin: 0 auto;display:block; width: 50%" src="images/octal.png" alt="">
+            <h3 tabindex="5">File permission: alpha vs octal</h3>
+
+            <ul tabindex="5">
+                <li>Octal <h4>rwxrw-r-- = 764</h4></li>
+
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

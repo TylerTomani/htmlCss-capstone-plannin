@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kernelAndShells</title>
+    <link rel="stylesheet" href="../../css/chapter.css">
+
+</head>
+<body>
+    <header>
+        <h1>Kernel and Shells</h1>
+    </header>
+    <section>
+        <h2>Kernel</h2>
+        <ul>
+            <li>core of the operating system that allocates time and memory to processes</li>
+            <li>it manages commands and programs conduct their function</li>
+        </ul>
+        <p>the kernal comes with version of unix you have</p>
+        <h2>the Shell</h2>
+        <p>the shell is how we interact with the kernel, it's what we see when we open up a terminal window</p>
+        <p>the shell sends request to the kernel, the kernel does its job, and the result is returned back to the shell so 
+            we can interact with them again
+        </p>
+        <h3>Popular Shells</h3>
+        <ul>
+            <li>sh: Thompson shell (1971)</li>
+            <li>sh: Bourne shell (1977), replaced the Thompson shell</li>
+            <li>csh: C shell (1979)</li>
+            <li>tcsh: Tabbed C shell (1979)</li>
+            <li>ksh: Korn shell (1982)</li>
+            <li>bash: Bourne-again shell (1987)</li>
+            <li>zsh: Z shell (1990)</li>
+        </ul>
+    </section>
+    <section class="img-container">
+        <p tabindex="1">the window is the shell</p>
+        <img tabindex="2" class="imgEnlarge" src="images/shell.png" alt="shell">
+        <p tabindex="3">echo $SHELL will return the location of the current shell being used</p>
+        <img class="imgEnlarge" tabindex="4" src="images/currentShellLocation.png" alt="current shell location">
+        <p tabindex="5">echo $0 will return the current shell</p>
+        <img tabindex="6" src="images/currentShell.png" alt="current shell">
+        <p tabindex="7">to switch into a shell simply type in the shell you wish to you </p>
+        <img class="imgEnlarge" tabindex="8" src="images/shellSwitch.png" alt="switch shell">
+        <p tabindex="9">IMPORTANT NOTE, everytime you switch shells you enter a shell within a shell,</p>
+        <p>if you switch shells many times then exit, you will ONLY EXIT into the previous shell!!</p>
+        <img class="imgEnlarge" tabindex="10" src="images/exitSHELL.png" alt="shell exiting">
+
+    </section>
+</body>
+</html>

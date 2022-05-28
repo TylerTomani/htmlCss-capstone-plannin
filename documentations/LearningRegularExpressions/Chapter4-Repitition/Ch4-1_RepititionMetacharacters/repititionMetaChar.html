@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>repititionMetaCharacters</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.map.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/default.css">
+</head>
+<body>
+    <header>
+        <h1>Repitition metaharacters</h1>
+    </header>
+    <main>
+        <section class="character container">
+            <h2>Repitition characters</h2>
+            <table tabindex="1" id="repeatTd">
+                <tr>
+                    <th>Metacharacter</th>
+                    <th>meaning</th>
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td> preceding item, zero or more times</td>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>preceding item, one or more times</td>
+                </tr>
+                <tr>
+                    <td>?</td>
+                    <td>preceding item, zero or one time</td>
+                </tr>
+            </table>
+            <p>these characters go after what we want to be repeated</p>
+            <ul>
+                <li>* the preceding character does not have to be there (it's optional)</li>
+                <li>with the + sign, the preceding character has to be there at least once</li>
+                <li>and the ?, it can either be there once or not at all (maybe there or not there)</li>
+            </ul>
+        <h3>examples</h3>
+        <p> the most common is /.+/ which means any character followed by anything to anything besides new line (when global is on) but Not line return</p>
+        <p tabindex="2">/Good .+\./ matches "Good morning." "Good Day." "Good evening." "Good night."</p>
+        <img tabindex="2" src="images/notGlobal.png" alt="">
+        <p> the + plus matches anything but new line (when global is off) </p>
+        <p><img tabindex="2" src="images/goods.png" alt="goods">&nbsp;<img src="images/goods2.png" alt=""></p>
+        <br>
+        <p>/\d+/ matches "90210"</p>
+        <img tabindex="3" src="images/90210.png" alt="">
+        <p tabindex="3">/\s[a-z]+[ed]\s matches any lowercase word ended in "ed"</p>
+        <br>
+        <table tabindex="3" id="repeatTd">
+            <tr>
+                <th>Metacharacter</th>
+                <th>meaning</th>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td> preceding item, zero or more times</td>
+            </tr>
+            <tr>
+                <td>+</td>
+                <td>preceding item, one or more times</td>
+            </tr>
+            <tr>
+                <td>?</td>
+                <td>preceding item, zero or one time</td>
+            </tr>
+        </table>
+        <p>/apples*/ would match "apple" "apples" or "applesssss", <span class="red">not sure why apple is inclued?</span></p>
+        <p class="ms-4 text-danger">-because the "s" can be there but doesnt have to be</p>
+        <p>/apples+/ would match "apples" and "applessss" but Not "apple",<span class="red">why?</span> </p>
+        <p class="ms-4 text-danger">-because the s has to there at least once</p>
+        <p>/apples?/ would match "apple" and "apples" but Not "applessss"</p>
+        <p><img src="images/applesQuestionMark.png" alt="apples question mark"><img src="images/applesAsterisk.png" alt="apple asterisk">
+        doesn't match applesssss because of no space in text after applesssss</p>
+        <p><img  src="images/applesssssSpace.png" alt="applesssss with space"> <strong><span class="red">why?</span></strong>
+        <img src="images/applesApplesssss.png" alt=""> </p>
+
+        <br tabindex="4">
+        <hr>
+        <h3 class="text-warning">The below are the same</h3>
+        <p>/\d\d\d\d*/ matches any number three digits or more (4th \d is optional)</p>
+        <p>/\d\d\d+ would also match any number with three digits or more</p>
+        <hr>
+        <p>/colou?r/, it matches "color" and "colour"</p>
+        <p>because the "u" can be there but doesn't have to be</p>
+        <br>
+        <p>this makes ? great for finding singular or plural words</p>
+        <p>like apples? napkins?</p>
+        <p><img src="images/napkins.png" alt="">&nbsp;<img src="images/napkin.png" alt=""></p>
+    </main>
+</body>
+</html>

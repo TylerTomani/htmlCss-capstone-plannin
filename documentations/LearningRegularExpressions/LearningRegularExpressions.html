@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearningRegularExpressions</title>
+    <link rel="stylesheet" href="css/learnRegExp.css">
+    <script src="js/regex.js" defer></script>
+</head>
+<body>
+    <a tabindex="1" href="../home.html">&larr;home</a>
+    <header>
+        <div>
+            <h1>Learning Regular Expressions</h1>
+            <p>Kevin Skoglund</p>
+            <img src="linkedinPic.png" alt="Learning Regular Expressions Kevin Skoglund">        
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <th>Shorthand</th>
+                    <th>Meaning</th>
+                    <th>Equivalent</th>
+                </tr>
+                <tr>
+                    <td>\d</td>
+                    <td>Digit</td>
+                    <td>[0-9]</td>
+                </tr>
+                <tr>
+                    <td>\w</td>
+                    <td>Word Character</td>
+                    <td>[a-zA-Z0-9_]</td>
+                </tr>
+                <tr>
+                    <td>\s</td>
+                    <td>Whitespace</td>
+                    <td>[ \t\r\n]</td>
+                </tr>
+                <tr>
+                    <td>\D</td>
+                    <td>Non Digit</td>
+                    <td>[^0-9]</td>
+                </tr>
+                <tr>
+                    <td>\W</td>
+                    <td>Non Word Character</td>
+                    <td>[^a-zA-z0-9_]</td>
+                </tr>
+                <tr>
+                    <td>\S</td>
+                    <td>Non Whitespace</td>
+                    <td>[^ \t\r\n]</td>
+                </tr>
+            </table>
+            </div>
+            <div>
+            <table tabindex="1" id="repeatTd">
+                <tr>
+                    <th>Metacharacter</th>
+                    <th>meaning</th>
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td> preceding item, zero or more times</td>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>preceding item, one or more times</td>
+                </tr>
+                <tr>
+                    <td>?</td>
+                    <td>preceding item, zero or one time</td>
+                </tr>
+            </table>
+        </div>
+    </header>
+   <main>
+       <section class="chapter">           
+           <ul>
+               <li><a href="#" class="dropmenu"><h2>Chapter1-Getting Started</h2></a>
+                    <ul>
+                        <li><a href="Chapter1-GettingStarted/NotationConventionModes/NotationConventionModes.html">Notation convention & modes</a></li>
+                    </ul>
+                </li>
+           </ul>
+       </section>
+       <section class="chapter">
+           <ul>
+               <li><a href="#" class="dropmenu"><h2>Chapter2-Characters</h2></a>
+                    <ul>
+                        <li><a href="Chapter2-Characters/Ch2-1_LiteralCharacter/literalCharacters.html">1. Literal Characters</a></li>
+                        <li><a href="Chapter2-Characters/Ch2-2_MetaCharacters/metaCharacters.html">2. Metacharacters</a></li>
+                    </ul>
+                </li>
+           </ul>
+           
+       </section>
+       <section class="chapter">
+            <ul>
+                <li><a href="#" class="dropmenu"><h2>Chapter3-Character Sets</h2></a>
+                    <ul>
+                        <li><a href="Chapter3-CharacterSets/Ch3-1_CharacterSets/CharacterSets.html">1. Character sets</a></li>
+                        <li><a href="Chapter3-CharacterSets/Ch3-2_CharacterRanges/CharacterRanges.html">2. Character ranges</a></li>
+                        <li><a href="Chapter3-CharacterSets/Ch3-3_NegativeCharacters/negativeCharacter.html">3. Negative Character Sets</a></li>
+                        <li><a href="Chapter3-CharacterSets/Ch3-4_MetaCharacterInCharSets/MetaCharacterInCharSets.html">4. Metacharacters inside Character Sets</a></li>
+                        <li><a href="Chapter3-CharacterSets/Ch3-5_ShorthandCharacters/ShorthandCharacterSets.html">5. Shorthand Character Sets</a></li>
+                    </ul> 
+                </li>
+            </ul>
+        </section>
+        <section class="chapter">
+            <ul>
+                <li><a href="#" class="dropmenu"><h2>Chapter4-Repitition</h2></a>
+                    <p style="color:red;">*do this chapter again</p>
+                    <ul>
+                        <li><a href="Chapter4-Repitition/Ch4-1_RepititionMetacharacters/repititionMetaChar.html">1. Repitition Metacharacters</a></li>
+                        <li><a href="Chapter4-Repitition/Ch4-2_QuantifiedRepitition/QuantifiedRepitition.html">2. Quantified Repitition</a></li>
+                        <li>3. Lazy Expressions</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section class="chapter">
+            <ul>
+                <li><a href="#" class="dropmenu"><h2>Chapter5-Grouping and Alternation</h2></a>
+                    <ul>
+                        <li><a href="Chapter5-GroupingMetaCharacters/Ch5-1_GroupingMetaCharacters/GroupingMetaCharacters.html">1. Grouping Metacharacters</a></li>
+                        <li><a href="Chapter5-GroupingMetaCharacters/Ch5-2AlternationMetaChar/AlternationMetaChar.html">2. Alternation Metacharacters</a></li>
+                        <li><a href="Chapter5-GroupingMetaCharacters/Ch5-3_EfficiencyWithAlternation/efficiencyAlternation.html">3. Efficiency When Using Alternation</a></li>
+                        <li><a href="Chapter5-GroupingMetaCharacters/ch5Challenge/ch5Challenge.html">ch5 Challenge</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section class="chapter">
+            <ul>
+                <li><a href="#" class="dropmenu"><h2>Chapter6-Anchors</h2></a>
+                    <ul>
+                        <li><a href="Chapter6-Anchors/Ch6-1_StartEndAnchors/statEndAnchors.html">1. Grouping Metacharacters</a></li>
+                        <li><a href="Chapter6-Anchors/Ch6-2_LineBreaksMultiLines/lineBreaksMultiLines.html">2. Line Breaks and Multiline Mode</a></li>
+                        <li><a href="Chapter6-Anchors/Ch6-3_WordBoundaries/wordBoundaries.html">3. Word Boundaries</a></li>
+                        
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        
+    </main>
+    <footer>
+        <ul style="list-style-type: none;">
+            <li><a target="_blank" href="https://regexr.com/">regexr.com</a></li style="list-style-type: none;">
+            <li><a target="_blank" href="https://www.youtube.com/watch?v=sa-TUpSx1JA">Atom regex youtube tutorial</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

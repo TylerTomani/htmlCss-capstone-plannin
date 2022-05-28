@@ -1,0 +1,32 @@
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;    
+}
+section {
+    display: inline-block;
+}
+.nanoHeader {
+    display: block;
+    background: limegreen;
+    color: black;
+}
+.nanoScript > img{
+    width: 99%;
+
+}
+pre {
+    background: black;
+    color: lime;
+    font-size: 1.2em;
+}
+.nanoScript {
+    font-size: 1.25em;
+    font-family: monospace;
+}
+@media screen and (max-width:692px){
+    main{
+        
+        display: flex;
+        flex-wrap: wrap;       
+    }
+}

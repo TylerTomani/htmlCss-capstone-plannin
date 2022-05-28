@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pipingOutputToInput</title>
+    <link rel="stylesheet" href="../../css/chapter.css">
+</head>
+<body>
+    <header>
+        <h1>Piping Output to Input</h1>
+    </header>
+    <main>
+        <a tabindex="1" href="../../unixEssentialTraining.html">&larr;home</a>
+        <section>
+            <h2 tabindex="1">command | command</h2>
+            <p>sends data from one command to another command using the pipe operator "|"</p>
+            <p>the output of command on the left goes into the input of the command on the right </p>
+            <img tabindex="2" src="images/catPipeSort.png" alt="">
+            <img tabindex="2" src="images/catPipeSort2.png" alt="">
+            <p tabindex="2">we can pipe in sucession multiple commands <br>
+            a great example is sorted and removing duplicates</p>
+            <img tabindex="3" src="images/catPipeSortPipeUniq.png" alt="">
+            <h2>GREAT USE of PIPE</h2>
+            <p tabindex="3">ps stands for "Process Step" and returns current users processes <br>
+            <strong>ps aux</strong> returns all processes and who owns them</p>
+            <p>this is how we monitor what programs/processes are running</p>
+            <p>by piping ps aux into grep <strong>ps aux | grep login</strong></p>
+            <p>we can see all programs being performed by those who are logged in</p>
+            <img tabindex="3" src="images/psAuxGrep.png" alt="">
+            <p tabindex="4">another useful use for piping into grep is searching history</p>
+            <p>just follow the grep command with what you are looking for</p>
+            <img tabindex="4" src="images/historyPipeGrepNano.png" alt="">
+        </section>
+    </main>
+    
+</body>
+</html>

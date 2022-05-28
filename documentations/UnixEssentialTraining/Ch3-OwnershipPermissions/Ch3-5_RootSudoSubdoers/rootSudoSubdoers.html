@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rootSudoSubdoers</title>
+    <link rel="stylesheet" href="../../css/chapter.css">
+    <style>
+        header h3, header p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Root, Sudo and Subdoers</h1>
+        <h2>Super Useful Command:</h2>
+        <strong><h3>sudo !!</h3></strong>
+        <p>does the last command as sudo</p>
+        <img src="images/sudoPastCmd.png" alt="">
+    </header>
+    <main>
+        <section tabindex="1">
+            <h2>root</h2>
+            <ul>
+                <li> can access anything</li>
+            </ul>                
+            <h2>sudo "substitue user and do"</h2>
+            <ul>
+                <li>is given privledges of root</li>
+                <li>defaults to root but can choose other users</li>
+            </ul>
+            <p> use -u option to specify different user other than root</p>
+            <h3>sudo -u</h3>
+            <p>sudo is used as a prefix to other commands</p>
+            <h3>sudo cat file.txt</h3>
+            <img tabindex="2" src="images/sudoWhoami.png" alt=""class="imageHover">
+            <br>
+            <img tabindex="2" src="images/sudoRoot.png" alt=""  class="imageHover">
+            <p>once sudo is used it won't ask for the password again for about 5 minutes</p>
+            <p>rememeber once using sudo it will stay in root or whatever user chosen</p>
+            <p>use -k to exit right after</p>
+            <h3>sudo -k whoami</h3>
+        </section>
+        <section>
+            <h2 tabindex="3">sudoers</h2>
+            <p>located at</p>
+            <h3> /etc/sudoers</h3>
+            <p>if you try showing this file, access will be denied</p>
+            <img tabindex="3" src="images/sudoerCatDenied.png" alt=""  class="imageHover">
+            <p>so just prefix it with sudo</p>
+            <img tabindex="3" src="images/sudoCatSudoer.png" alt="" class="imgHover">
+            <p>and it works</p>
+            <img tabindex="3" src="images/sudoerWorks.png" alt="" class="imgHover">
+            <p>the users listed in the orange box above have the ability to use sudo</p>
+            <p> they are the <em><strong>sudoers</strong></em></p>
+            
+
+
+        </section>
+    </main>
+</body>
+</html>

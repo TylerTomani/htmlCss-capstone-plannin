@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileDirectoryOwnership</title>
+    <link rel="stylesheet" href="../../css/chapter.css">
+    <style>
+        h3{
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>File Directory and Ownership</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Owner</h2>
+            <p>the owner appears in the 3rd column</p>
+            <img tabindex="1" src="images/owner.png" alt="owner" class="imgHover">
+            <h2>Group</h2>
+            <p>the group is in the 4th column</p>
+            <img tabindex="2" src="images/group.png" alt="group" class="imgHover">
+            <p>the parent directory has a different owner and group</p>
+            <img tabindex="3" src="images/parentDirectoryOwner.png" alt="parent directory owner and group" class="imgHover">
+        </section>
+        <section>
+            <h2 tabindex="4">Change Ownership</h2>
+            <h3>chown user:group somefile.txt</h3>
+            <p>will change user and owner</p>
+            <h3>chown user somefile.txt</h3>
+            <p>will just change owner</p>
+            <h3>chown :group somefile.txt</h3>
+            <p>will only change group</p>
+            <br>
+            <p tabindex="5">changing the owner of a directory will not change the ownership of the files inside</p>
+            <p> to do that we need to use the recursive option</p>
+            <h3>chown -R user somedirectory</h3>
+        </section>
+        <section>
+            <h2>Change owner not permitted</h2>
+            <img tabindex="6" src="images/changeOwnerNotPermitted.png" alt="change ownership not permitted" class="imgHover">
+            <p> in order to change the owner of a file you must be the root user or use a command called</p>
+            <h3>sudo</h3>
+            <br tabindex="7">
+            <img tabindex="8" src="images/sudo.png" alt="sudo" class="imgHover">
+        </section>
+    </main>
+    
+</body>
+</html>

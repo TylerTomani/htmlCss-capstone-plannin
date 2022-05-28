@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiteralCharacters</title>
+    <link rel="stylesheet" href="../../css/default.css">
+</head>
+<body>
+    <header>
+        <h1 tabindex="1">Literal Characters</h1>
+    </header>
+    <main>
+        <section class="examples">
+            <h2>literal matches</h2>
+            <p>/car/ matches "car"</p>
+            <p>/car/ matches "<span class="blue">car</span>nival"</p>
+            <p>searches are case sensitive by default</p>
+            <img src="images/literal1.png" alt="car"><img src="images/literal2.png" alt="carnival">
+            <img src="images/literal3.png" alt="carnival uppercase"> <img src="images/literal4.png" alt="carnival i flag">
+            <img src="images/literal5.png" alt="">
+            <p>spcaes are characters so /<span class="blue">car</span>/ would not match </p>
+            <p>c a r </p>
+            <img src="images/literalSpace.png" alt="literal space">
+        </section>
+        <section class="examples">
+            <h2 tabindex="2">standard vs global matching</h2>
+            <h3 tabindex="3">Standard (non-global) matching</h3>
+            <p> by default the regex will be the first (leftmost) match in the document </p>
+            <p>for example /zz/ will only match the first two zz's of "pi<span class="blue">zz</span>azz"</p>
+            <h3 tabindex="4">Global matching</h3>
+            <p>will match all two zz's thoughtout document so /zz/ would match "pi<span class="blue">zz</span>a<span class="blue">zz</span>" </p>
+            <img src="images/pizzazz.png" alt="pizzazz"> <img src="images/pizzazzGloabl.png" alt="pizzazz global">
+        </section>
+        <section>
+            <h2>IMPORTANT EXPLANATION</h2>
+            <p>In the linkedin video<a href="https://www.linkedin.com/learning/learning-regular-expressions-2/literal-characters?autoAdvance=true&autoSkip=true&autoplay=true&resume=false&u=42262329">
+            Chapter2-Lesson1_LiteralCharacters</a> at 6:15, kevin explains an importan point of how the computer goes about searching the string for the Regular
+            expression, watch this</p>
+            <img tabindex="5" style="width: 75%;" src="images/importantVideoNote.png" alt="">
+        </section>
+</body>
+</html>

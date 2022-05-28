@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CommandBasics</title>
+    <link rel="stylesheet" href="../../css/chapter.css">
+    <style>em{margin-left: 2%;}</style>
+</head>
+<body>
+    <header>
+        <h1>Command Basics</h1>
+    </header>
+    <section>
+        <h2 tabindex="1">Commands</h2>
+        <ul>
+            <li>are small programs</li>
+            <li>files containing code with permission to execute</li>
+            <li>Many of these files are stored in:
+                <ul>
+                    <li>/bin</li>
+                    <li>/usr/bin</li>
+                </ul>
+            </li>
+            <p>to see the location of a command which is a file type the command which</p>
+            <img tabindex="2" src="images/whichCat.png" alt="which cat" class="imgHover">
+            <p>this will show the location of that command/file</p>
+            <h3>which is a is a shell built in command</h3>
+            <img tabindex="3" src="images/whichWhich.png" alt="which which" class="imgHover">
+            <h2 tabindex="4">Path</h2>
+            <p>path allows us to see how the unix system goes about accessing these programs/files</p>
+            <img tabindex="4" src="images/path.png" alt="dollar sign all caps PATH" class="imgHover">
+            <p>This list is a list of directories where linux will go looking for the file</p>  
+            <p>it looks for the file in this order</p>
+            <p>So the above will first look for the file in
+            <br> 
+            <em><strong>/usr/local/bin:</strong></em> </p>
+            <p>then, <br>
+            <em><strong>/usr/bin:</strong></em> <br>
+            and so on </p>
+            <p>this is also the order of preference linux looks for it</p>
+            <p> this is also all customizable</p>
+        </ul>
+    </section>
+    <section>
+        <h2 tabindex="5">Changing the path variable</h2>
+        <h3>PATH= </h3>
+        <img tabindex="5" src="images/changePath.png" alt="" class="imgHover">
+        <p>Notice how we change the path which tell unix to <strong>Only</strong> look in the specified locations </p>
+        <p>Since we changed the path, and ls is located in /bin/ls</p>
+        <p>linux will not find it because it is only looking in</p>
+        <em><strong>/usr/local/bin: and /use/bin</strong></em>
+        <p>and <strong>Not</strong>just /bin</p>
+        <h3 tabindex="6">Important Note</h3>
+        <p>if we change the path this way it will only change the path during this sessions</p>
+        <p>so if we quit terminal or open a new terminal window, the change will not apply</p>
+    </section>
+</body>
+</html>

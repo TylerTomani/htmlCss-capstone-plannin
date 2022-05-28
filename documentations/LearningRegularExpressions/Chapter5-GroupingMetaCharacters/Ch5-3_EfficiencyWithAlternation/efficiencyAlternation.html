@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>efficiencyWhenUsingAlternation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.map.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/default.css">
+    <style>img{margin-bottom: 2%;}</style>
+</head>
+<body>
+    <a tabindex="1" href="../../LearningRegularExpressions.html">&larr;home</a>
+    <header>
+        <h1>Efficiency When Using Alternation</h1>
+    </header>
+    <main class="container">
+        <p>the following is an example of regex being eager</p>
+        <p>since grouping is given leftmost precedence </p>
+        <p>it will not return peanutbutter</p>
+        <img tabindex="2" src="images/1eager.png" alt="">
+        <p>One way to fix this would be </p>
+        <img tabindex="2" src="images/2penutbutter.png" alt="">
+        <p>adding the second question mark will make the expression "lazy"</p>
+        <p>so it will stop after finding peanut</p>
+        <img tabindex="3" src="images/3penutLazy.png" alt="">
+        <hr>
+        <h2>examples</h2>
+        <p>the following will work when it global because regex is "greedy"</p>
+        <img tabindex="4" src="images/4greedy.png" alt="">
+        <p>but won't work when not in global because regex is also "eager"</p>
+        <img tabindex="4" src="images/5eager.png" alt="">
+        <hr>
+        <p>notice how the following doesn't work </p>
+        <img tabindex="5" src="images/6notice.png" alt="">
+        <p>this is because of the | operator, it stops after finding one of the matches</p>
+        <video tabindex="6" width="400px" controls autoplay loop>
+            <source src="videos/greedy.mov" type="video/mov">
+        </video>
+        <hr>
+        <h3>Complex example</h3>
+        <p tabindex="7">/\w+_\d{2,4}|\d{4}_export|export_\d{2}</p>
+        <p>looking for three different things</p>
+        <ul>
+            <li>first, any number of word characters
+                <ul><li>followed by 2 to 4 digits</li></ul>
+            </li>
+            <li>second, any four digits
+                <ul><li>followed by the word export</li></ul>
+            </li>
+            <li>third, the word export
+                <ul><li>followed by two digits</li></ul>
+            </li>
+        </ul>
+        <p>this would be better if written:</p>
+        <p tabindex="7">/export_\d{2}|\d{4}_export|\w+_\d{2,4}</p>
+        <p>this is because it's greedy,so grabbing any word "\w+", it will try <br>
+        to grab any word as opposed to the more specific word export</p>
+    </main>
+    
+</body>
+</html>

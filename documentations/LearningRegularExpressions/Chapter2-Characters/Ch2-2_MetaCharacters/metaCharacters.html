@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><h2> Chapter2-Metacharacters</h2></title>
+    <link rel="stylesheet" href="../../css/default.css">
+    <style>
+        li {display: inline-block;}
+        #normalLi li{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 tabindex="1">Metacharacters</h1>
+        <p>Here is the list of metacharacters</p>
+    <!-- list of metacharacters -->
+        <ul>
+            <li>/</li>
+            <li>.</li>
+            <li>*</li>
+            <li>+</li>
+            <li>-</li>
+            <li>{}</li>
+            <li>[]</li>
+            <li>$</li>
+            <li>|</li>
+            <li>?</li>
+            <li>()</li>
+            <li>:</li>
+            <li>!</li>
+            <li>=</li>
+        </ul>
+    <!-- end of metacharacters list -->
+        <p>they can have one or more meanings</p>
+    </header>
+<main>
+    <section class="character">
+        <h3 tabindex="2">WildCard .</h3>
+        <p>The wild card character . (period) matches anything except new line, or line return</p>
+        <p>/h.t/ matches "hat", "hot", "hit" but not "heat"</p>
+        <p>because the wildcard character only matches one single character, including a space or special character</p>
+        <img src="images/hat.png" alt="hat"><img src="images/hot.png" alt="hot"><img src="images/hit.png" alt="hit">
+        <img src="images/heat.png" alt="heat"><img src="images/hSpaceT.png" alt="h space t"> <img src="images/hPoundT.png" alt="h pound t">
+        <img src="images/wildcard.png" alt="wildcard">
+        <p>/9.00/ will match "9.00" "9300" or "9-00"</p>
+        <img tabindex="3" src="images/nineWildCardZeros.png" alt="nine wildercard zeros">
+        <p>but be careful and rememember, a period is not a period, it is a wild card</p>
+        <p> we have to us an escape character to use a period as an period</p>
+        <br>
+    </section>
+    <section class="character">
+        <h3 tabindex="4">Escape Character \ </h3>
+        <p>The escape character \ (backslash) allows us to use a metacharacter "literally" in a regular expression</p>
+        <p>it treats the regex character as a literal character</p>    
+        <p>Match a period with /\./</p>
+        <p>/9\.00 matches "9.00", but not "9500" or "9-00"</p>
+        <img tabindex="5" src="images/ninePeriodZero.png" alt="nine period zero">
+        <p>You can escape a \ backslash with another backslash /\\/ </p>
+        <p>Another important note to remember, quotes are NOT metacharacters and do not need to be escaped</p>
+        <br>
+        <p>In the following example, the period works as a wild card because the period is a character</p>
+        <p>but to be safe, it is good practice to escape the period at the end</p>
+        <img tabindex="6" src="images/safeEscape1.png" alt="his_export.txt"> <img src="images/safeEscape2.png" alt="his&her.txt">
+        <img src="images/safeEscape3.png" alt="safe escape period">
+        <p>another example, gives us just the period and not the wildcard underscore _</p>
+        <img tabindex="7" src="images/escChar2.png" alt="escape character two">
+    </section>
+    <section class="character">
+        <h3 tabindex="8" >Other Special Characters</h3>
+        <ul id="normalLi">
+            <li>- Spaces " "</li>
+            <li>- Tabs \t</li>
+            <li>- Line Returns 
+                <ul>
+                    <li>(\r) line return</li>
+                    <li>(\n) new line </li>
+                    <li>(\r,\n, \r\n)</li>
+                </ul>
+            </li>
+            <p>(\n\r) both line return and new line</p>
+        </ul>
+        <p> To match a Space, we need to type a literal space " "</p>
+        <p>to match a Tab we need to use \t</p>
+        <p>These are refered to as control character</p>
+        
+        <img src="images/tab.png" alt="tab">
+        <img src="images/newLine.png" alt="new line">
+</section>
+
+        
+            <h3>Challenge 1</h3>
+            <p><a  href="Ch2Challenge1/Challenge1PoemSelfReliance.txt">Poem Challenge</a> <img src="images/Ch2Challenge1/challengeInstruct.png" alt="poem instructions"></p>
+        </section>
+    </main>
+    <footer>
+        <a target="_blank"href="https://www.linkedin.com/learning/learning-regular-expressions-2/metacharacters?autoAdvance=true&autoSkip=true&autoplay=true&resume=false&u=42262329"
+                    > linkdenmeta characters</a>     
+    </footer>
+</body>
+</html>

@@ -1,0 +1,18 @@
+h1 {
+    display: flex;
+    justify-content: center;
+}
+a:focus,a:active{
+    box-shadow: -.25rem -10rem 2rem 10rem lime;
+}
+img {
+    width: 60vw;
+}
+code {
+    display: block;
+    width: 50vw;
+    background: black;
+    color: lime;
+    font-size: 1.4rem;
+
+}

@@ -1,0 +1,46 @@
+h1,h2,h3,h4,h5,p{
+    margin: 0;
+    padding:0;
+}
+ol,ul,li {
+    margin: 0;
+}
+header div {
+    display: inline-block;
+    border: 1px solid black;
+}
+table td {
+    border: 1px solid black;
+}
+table tr td:nth-child(1){
+    text-align: center;
+}
+img {
+    width: "50%";
+}
+.blue {
+    color: blue;
+}
+.red {
+    color: red;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.chapter {
+    border: 1px solid black;
+}
+a:visited {
+    color: blue;
+    text-decoration: blue;
+}
+.hide-menu {
+    display: none;
+}
+.show-menu {
+    display: block;
+}
+.active > li > ul{
+    display: block;
+}

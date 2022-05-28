@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>statEndAnchors</title>
+    <style>
+        tbody td:first-child {text-align: center;}
+        tbody > tr > td,th {border: 1px solid black;}
+    </style>
+</head>
+<body>
+    <a tabindex="1" href="../../LearningRegularExpressions.html">&larr;home</a>
+    <h1>Starting and Ending Anchors</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Metatcharacter</th>
+                <th>Meaning</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>^</td>
+                <td>Start of string/line</td>
+            </tr>
+            <tr>
+                <td>$</td>
+                <td>End of string/line</td>
+            </tr>
+            <tr>
+                <td>\A</td>
+                <td>Start of string, never end of line</td>
+            </tr>
+            <tr>
+                <td>\Z</td>
+                <td>End of string, never end of line</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>we use the ^ anchor to ensure the word is the first word in the string</p>
+    <p>/^apple/ or /\Aapple/</p>
+    <p>we use the $ to ensure the word is at the end of the string</p>
+    <p>/apple$/ or /apple\Z/</p>
+    <br>
+    <p>The ^ and $ are supported in all regex tools, but \A and \Z are not</p>
+    <h3 tabindex="2">good example</h3>
+    <p>searching emails in right format</p>
+    <p>/\w@\w\.[a-z]{3}/</p>
+    <img tabindex="2" src="images/startEndEmail.png" alt="">
+    <p>but would still validate if something was after ".com"</p>
+    <p>to ensure the email is the right format we should add "^" and "$"</p>
+    <p>/^\w+@\w\.[a-z]{3}$/</p>
+    <img tabindex="3" src="images/startEndEmail2.png" alt="">
+</body>
+</html>

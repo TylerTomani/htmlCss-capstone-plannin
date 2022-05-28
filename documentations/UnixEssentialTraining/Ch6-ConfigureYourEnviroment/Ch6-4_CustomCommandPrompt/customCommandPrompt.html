@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ch6-3_settingPathVariable</title>
+    <link rel="stylesheet" href="../../css/nanoScript.css">
+    <link rel="stylesheet" href="../../css/chapter.css">
+    <style>
+        table{
+            background: white;
+            width: 20em;
+        }
+        tbody {
+            padding: 5%;
+        }
+    </style>
+</head>
+<body>
+    <a tabindex="1" href="../../unixEssentialTraining.html">&larr;home</a>
+    <h1>Customizing the Command Prompt</h1>
+    <main>
+        <section class="nanoScript">
+            <p>Just like the path we can access the command prompt with $PS1</p>
+            <img tabindex="2" src="images/commandPrompt.png" alt="">
+            <p>We can change the prompt temporaily by typing </p>
+            <pre tabindex="3">
+            PS1="whatever :"
+                        </pre>
+            <img tabindex="4" src="images/commandPrompt2.png" alt="">
+            <p>change the $PS1 variable inside the ~/.zshrc to make change permenant</p>
+            <pre tabindex="5">
+    export PS1="--> :"
+            </pre>
+            <h2>Command Prompt Format Codes</h2>
+            <table tabindex="6">
+                <thead>
+                    <th>Bash</th>
+                    <th>Zsh</th>
+                    <th>Output Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>\u</td>
+                        <td>%n</td>
+                        <td>Username</td>
+                    </tr>
+                    <tr>
+                        <td>\s</td>
+                        <td>%N</td>
+                        <td>Current Shell</td>
+                    </tr>
+                    <tr>
+                        <td>\w</td>
+                        <td>%d</td>
+                        <td>Current working directory</td>
+                    </tr>
+                    <tr>
+                        <td>\W</td>
+                        <td>%1d</td>
+                        <td>Basename of current working</td>
+                    </tr>
+                    <tr>
+                        <td>\H</td>
+                        <td>%M</td>
+                        <td>Hostname</td>
+                    </tr>
+                    <tr>
+                        <td>\h</td>
+                        <td>%m</td>
+                        <td>Hostname up to first period</td>
+                    </tr>
+                    <tr>
+                        <td>\!</td>
+                        <td>%!</td>
+                        <td>History number of this command</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <table tabindex="7">
+                <thead>
+                    <th>Bash</th>
+                    <th>Zsh</th>
+                    <th>Output Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>\d</td>
+                        <td>%w</td>
+                        <td>Date in weekday-date format</td>
+                    </tr>
+                    <tr>
+                        <td>\A</td>
+                        <td>%T</td>
+                        <td>Time in 24Hour HH:MM format</td>
+                    </tr>
+                    <tr>
+                        <td>\t</td>
+                        <td>%*</td>
+                        <td>Time in 24hour HH:MM:SS format</td>
+                    </tr>
+                    <tr>
+                        <td>\@</td>
+                        <td>%t</td>
+                        <td>Time in 12hour HH:MM am/pm format</td>
+                    </tr>
+                    <tr>
+                        <td>\D{format}</td>
+                        <td>%D{format}</td>
+                        <td>Use strftime format (%Y-%M-%d)</td>
+                    </tr>
+                    
+
+                </tbody>
+            </table>
+            
+            
+        </section>
+    </main>
+    
+</body>
+</html>

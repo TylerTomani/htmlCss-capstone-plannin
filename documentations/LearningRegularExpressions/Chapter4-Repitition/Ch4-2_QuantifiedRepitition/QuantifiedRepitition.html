@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuantifiedRepitition</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.map.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/default.css">
+</head>
+<body>
+    <header>
+        <h1 tabindex="1">Quantified Repitition</h1>
+    </header>
+    <main class="container">
+        <div style="border:1px solid black;" class="d-table">
+            <div class="d-table-row">
+                <div class="d-table-cell pe-3">metacharacter</div>
+                <div style="text-align: center;" class="d-table-cell">meaning</div>
+            </div>
+            <div class="d-table-row">
+                <div style="text-align: center;" class="d-table-cell">{</div>
+                <div class="d-table-cell">starting quantified repitition</div>
+            </div>
+            <div class="d-table-row">
+                <div style="text-align: center;" class="d-table-cell">}</div>
+                <div class="d-table-cell">ending quantified repitition</div>
+            </div>
+
+        </div>
+        <p class="">as apposed to metacharacter, this allows us to specify exactly how many times we want character repeated</p>
+        <h2 class="text-night">{min,max}</h2>
+        <p>this means the <span style="font-size: 1.4em;">{minimum times it can be repeated, maximum times it can be repeated}</span> </p>
+        <ul>
+            <li><p>min always must be include, and can be zero</p></li>
+            <li>maximum value is optional</li>
+        </ul>
+        <h3>Three syntaxes</h3>
+        <ul>
+            <li>\d{4,8} 
+                <p> matches number between 4 and 8 digits</p>
+            </li>
+            <li>\d{4} 
+                <p> matches numbers 4 digits (maximum is assumed to be the minimum)</p>
+            </li>
+            <li>\d{4,}
+                <p>matches numbers 4 or more digits (max is infinite)</p>
+                <p class="ps-5">\d{4,} would be the same as <span style="font-size: 1.4em;">\d*</span></p>
+                <p class="ps-5">\d{1,} would be the same as <span style="font-size: 1.4em;">\d+</span><span style="color:red"> why?</span></p>
+
+            </li>
+        </ul>
+        <h4 tabindex="2">Good Example using this method</h4>
+        <ul>
+            <li>Phone numbers
+                <ul>
+                    <li>\d{3}-\d{3}-\d{4}</li>
+                </ul>
+            </li>
+            <li> Finaincials documents like bonds
+                <ul>
+                    <li> A{1,2} would match "A" Bonds and "AA" Bonds but NOT <span style="color:red;">"AAA Bonds"</span></li>
+                </ul>
+            </li>
+        </ul>
+        <div tabindex="3" class="images">
+        <img src="images/1.png" alt="">
+        <img src="images/2.png" alt="">
+        <img src="images/3.png" alt="">
+        <img src="images/4.png" alt="">
+        <br>
+        <img src="images/1-2.png" alt="">
+        <img src="images/1-3.png" alt="">
+        <img src="images/1-4.png" alt="">
+        </div>
+        <hr>
+        <div tabindex="4" class="images">
+        <p>the \s will limit the search to one line because remember, \s is white space so (new line, line return, space, or tab)</p>
+        <img src="images/1space.png" alt="">
+        <img src="images/2space.png" alt="">
+        </div>
+    </main>
+</body>
+</html>

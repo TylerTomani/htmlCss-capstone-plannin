@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch5Challenge</title>
+</head>
+<body>
+    <h1>ch5 Challenge</h1>
+    <p>find "myself", "yourself" and "thyself" and nothing else</p>
+    <p>/(my|your|thy)self/</p>
+    <hr>
+    <p>find "good", "goodness", and "goods" (without typing good more than once</p>
+    <p>/good(ness|s)?/</p>
+    <p>there is no problem with mixing option with repitition operators</p>
+    <p>? is zero or more times</p>
+    <hr>
+    <p>match "do" or "does" followed by "no" "not" or "nothing"</p>
+    <p>/[Dd]o(es)? no(t(hing)?)?/</p>
+    <p>another posibility is </p>
+    <p style="color:red">/[Dd]o(es)? not(t|thing)?/ <br>
+    but this would not return "nothing" because regex is eager</p>
+    <p>so switch the "t" and "thing")</p>
+    <p>/[Dd]o(es)? no(thing|t)?/</p>
+    <p>BELOW, is the most practical solution</p>
+    <p style="color:red">/[Dd]o(es)? (no|not|nothing)/
+    BUT, notice same problem with regex's eagerness</p>
+    <p>so switch it around</p>
+    <p>/[Dd]o(es)? (nothing|not|no)/</p>
+
+
+</body>
+</html>

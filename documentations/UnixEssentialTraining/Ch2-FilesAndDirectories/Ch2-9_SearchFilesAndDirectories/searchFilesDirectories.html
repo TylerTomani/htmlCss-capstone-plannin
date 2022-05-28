@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>searchFilesDirectories</title>
+    <link rel="stylesheet" href="../../css/chapter.css">
+</head>
+<body>
+    <header>
+        <h1>Searching for Files and Directories</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Searching for Files</h2>
+            <h3 tabindex="1">find path expression</h3>
+            <p>we use the find command, followed by the path we want to search, followed by the <strong>expression</strong> we want to use for searching</p>
+            <h4 tabindex="2">the expressions</h4>
+            <p> the are many expression to use for the find command</p>
+            <p> but the most common expression is:</p>
+            <h4>-name</h4>
+            <h3>find /home -name "vacation_photo.jpg"</h3>
+            <p>in this example we use the dot (.) notation indicating the current directory "pwd" </p>
+            <img tabindex="3" src="images/findName.png" alt="find dash name" class="imgHover">
+            <p tabindex="4"><strong>but what if we don't know the exact file name</strong></p>
+            <h2 tabindex="5">find Wildcard Characters</h2>
+            <p>find allows us to use some wild card characters from regular expressions</p>
+            <table tabindex="6">
+                <tr>
+                    <th>Wildcard</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>zero or more characters (glob)</td>
+                </tr>
+                <tr>
+                    <td>?</td>
+                    <td>any one character</td>
+                </tr>
+                <tr>
+                    <td>[]</td>
+                    <td>any character within bracket</td>
+                </tr>
+            </table>
+            <h2 tabindex="7">Examples</h2>
+            <p>here is the same directory from above containing files and directories</p>
+            <img tabindex="8" src="images/exampleDirectory.png" alt="example directory" class="imgHover">
+            <p>lets use the asterisk wildcard character to find any file ending in .txt</p>
+            <img tabindex="9" src="images/findAsteriskWildcard.png" alt="find asterisk wildcard" class="imgHover">
+            <p>notice how find is recursive, meaning it will go inside directories within the find command's specified directory </p>
+            <h2>more examples</h2>
+            <p>find file name starting with f then three characters _underscore then anything that ends with .txt</p>
+            <h3>find . -name "f???_*.txt" </h3>
+            <img tabindex="" src="images/QuestionWildCard.png" alt="question mark wildcard">
+            <p>would return the same thing as</p>
+            <h3>find . -name "[fmt]ile_*.txt"</h3>
+            <img tabindex="10" src="images/characterSetAsterisk.png" alt="character set and asterisk wildcard" class="imgHover">
+            <h3>Just keep practicing regular expressions and this will be easy</h3>
+
+        </section>
+    </main>
+</body>
+</html>
